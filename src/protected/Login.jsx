@@ -1,9 +1,12 @@
 import { Button, Form, Input } from "antd";
 
 function Login() {
+  const submit = (values) => {
+    console.log(values);
+  };
   return (
     <div>
-      <Form>
+      <Form onFinish={submit}>
         <Form.Item
           label="Email"
           name="email"

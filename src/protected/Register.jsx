@@ -6,7 +6,7 @@ function Register() {
   };
   return (
     <div className="max-w-6xl mx-auto flex flex-col justify-center items-center mt-10">
-      <div className="flex flex-col p-10 w-100 justify-centeritems-center shadow-lg">
+      <div className="flex flex-col p-10 w-100 justify-centeritems-center shadow-lg mt-30">
         <Form onFinish={submit} layout="vertical">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
             Register

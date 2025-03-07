@@ -1,4 +1,4 @@
-import { Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 
 function Login() {
   return (
@@ -18,6 +18,9 @@ function Login() {
         >
           <Input />
         </Form.Item>
+        <Button type="primary" htmlType="submit">
+          Login
+        </Button>
       </Form>
     </div>
   );

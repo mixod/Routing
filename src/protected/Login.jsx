@@ -1,7 +1,31 @@
 import { Button, Form, Input } from "antd";
+import axios from "axios";
+import { API_BASE_URL } from "../../apiconfig";
 
 function Login() {
+  const loginFu = async (values) => {
+    try {
+      const res = await axios.post(
+        `${API_BASE_URL}/api/v1/login/access-token`,
+        {
+          username: values.email,
+          password: values.password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const submit = (values) => {
+    loginFu(values);
+
     console.log(values);
   };
   return (

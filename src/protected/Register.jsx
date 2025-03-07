@@ -1,9 +1,32 @@
 import { Button, Form, Input } from "antd";
+import axios from "axios";
+import { API_BASE_URL } from "../../apiconfig";
 
 function Register() {
-  const registerInfo = async () => {};
+  const registerInfo = async (values) => {
+    try {
+      const res = await axios.post(
+        `${API_BASE_URL}/api/v1/register`,
+        {
+          full_name: values.name,
+          phone_number: values.phone,
+          email: values.email,
+          password: values.password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const submit = (values) => {
+    registerInfo(values);
     console.log(values);
   };
   return (
@@ -15,14 +38,14 @@ function Register() {
           </h2>
           <Form.Item
             label="Name"
-            name="user_name"
+            name="name"
             rules={[{ required: true, message: "Please input your name" }]}
           >
             <Input />
           </Form.Item>
           <Form.Item
             label="Phone"
-            name="phone_number"
+            name="phone"
             rules={[{ required: true, message: "Please input your password" }]}
           >
             <Input />

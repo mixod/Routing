@@ -1,6 +1,8 @@
 import { Button, Form, Input } from "antd";
 
 function Register() {
+  const registerInfo = async () => {};
+
   const submit = (values) => {
     console.log(values);
   };

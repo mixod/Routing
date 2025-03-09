@@ -1,6 +1,11 @@
+import { Button, Popconfirm } from "antd";
 import { NavLink } from "react-router-dom";
 
 function Nav() {
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.reload();
+  };
   return (
     <div>
       <ul>
@@ -11,6 +16,15 @@ function Nav() {
           <NavLink to={"/about"}>About</NavLink>
         </li>
       </ul>
+      <Popconfirm
+        title="logout"
+        description="Are you sure to logout?"
+        onConfirm={logout}
+        okText="Yes"
+        cancelText="No"
+      >
+        <Button>Logout</Button>
+      </Popconfirm>
     </div>
   );
 }

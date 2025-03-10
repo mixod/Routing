@@ -10,10 +10,24 @@ function Nav() {
     <div>
       <ul>
         <li>
-          <NavLink to={"/home"}>Home</NavLink>
+          <NavLink
+            to={"/home"}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-blue-500" : ""
+            }
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to={"/about"}>About</NavLink>
+          <NavLink
+            to={"/about"}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-blue-500" : ""
+            }
+          >
+            About
+          </NavLink>
         </li>
       </ul>
       <Popconfirm

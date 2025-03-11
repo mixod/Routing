@@ -29,6 +29,16 @@ function Nav() {
             About
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to={"/about"}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-blue-500" : ""
+            }
+          >
+            Contact
+          </NavLink>
+        </li>
       </ul>
       <Popconfirm
         title="logout"

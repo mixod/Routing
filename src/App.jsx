@@ -5,6 +5,7 @@ import Login from "./protected/Login";
 import Register from "./protected/Register";
 import About from "./pages/About";
 import ProtectedRoute from "./protected/ProtectedRoute";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Route>
         <Route path="/login" element={<Login />} />

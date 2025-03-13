@@ -13,7 +13,7 @@ function Nav() {
           <NavLink
             to={"/home"}
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-blue-500" : ""
+              isPending ? "pending" : isActive ? "text-red-500" : ""
             }
           >
             Home
@@ -23,7 +23,7 @@ function Nav() {
           <NavLink
             to={"/about"}
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-blue-500" : ""
+              isPending ? "pending" : isActive ? "text-red-500" : ""
             }
           >
             About
@@ -31,9 +31,9 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            to={"/about"}
+            to={"/contact"}
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-blue-500" : ""
+              isPending ? "pending" : isActive ? "text-red-500" : ""
             }
           >
             Contact

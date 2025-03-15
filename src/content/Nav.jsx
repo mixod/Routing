@@ -39,6 +39,16 @@ function Nav() {
             Contact
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to={"/service"}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-red-500" : ""
+            }
+          >
+            Service
+          </NavLink>
+        </li>
       </ul>
       <Popconfirm
         title="logout"
